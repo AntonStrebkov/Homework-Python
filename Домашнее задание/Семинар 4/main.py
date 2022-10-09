@@ -36,15 +36,37 @@ from random import randint
 
 k = int(input("Введите степень: "))
 list = []
+res = ''
 for i in range(k + 1):
     list.append(randint(0, 101))
-print(list)
-# Здесь я понял что отталкиваться нужно от длины списка
-# for i in range(len(list)):
-# Если i не равна 2 и 1 то нужно записать "элемент[i] списка" + "х^" + "степень (длина - 1)"
-# Если i равна 2 то "элемент[i]" + "х"
-# Если i равна 1 то просто последний элемент списка
-# Между этим еще нужно поставить "+"
-# И я так понимаю нужно как то развернуть список, потому что заполнение начнется с i = 1
+# print(list)
+# # for i in range(len(list)):
+# #     if i == len(list) - 1:
+# #         res += str(list[i])
+# #     else:
+# #         res += str(list[i]) + 'x^' + str(len(list) - i - 1) + '+'
+# # print(res)
+# # with open('file.txt', 'w') as data:
+# #     data.write(res)
 
 # 5. Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл, содержащий сумму многочленов.
+list = []
+res = ''
+for i in range(k + 1):
+    list.append(randint(0, 101))
+list2 = []
+res = ''
+for i in range(k + 1):
+    list2.append(randint(0, 101))
+list3 = [x+y for x, y in zip(list, list2)]
+print(list)
+print(list2)
+print(list3)
+for i in range(len(list)):
+    if i == len(list3) - 1:
+        res += str(list3[i]) + '=0'
+    else:         
+        res += str(list3[i]) + 'x^' + str(len(list3) - i - 1) + '+'
+print(res)
+with open('file.txt', 'w') as data:
+    data.write(res)
