@@ -14,6 +14,7 @@ print(text)
 # Сколько конфет нужно взять первому игроку, чтобы забрать все конфеты у своего конкурента?
 # from random import randint
 
+import random
 
 text = 'Игра с конфетами!'
 print(text)
@@ -166,30 +167,30 @@ while game_over == False:
 print_map()
 print('Победил', win)
 
-# 4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
+# # 4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
 
-text = 'WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW'
+# text = 'WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW'
 
-count = 1
-st = ''
-for i in range(len(text) - 1):
-    if text[i] == text[i + 1]:
-        count += 1
-    else:
-        st = st + str(count) + text[i]
-        count = 1
-if count > 1 or (text[len(text)-2] != text[-1]):
-    st = st + str(count) + text[-1]
-print(st)
+# count = 1
+# st = ''
+# for i in range(len(text) - 1):
+#     if text[i] == text[i + 1]:
+#         count += 1
+#     else:
+#         st = st + str(count) + text[i]
+#         count = 1
+# if count > 1 or (text[len(text)-2] != text[-1]):
+#     st = st + str(count) + text[-1]
+# print(st)
 
-text = '12W1B12W3B24W1B14W'
+# text = '12W1B12W3B24W1B14W'
 
-num = ''
-st = ''
-for i in range(len(text)):
-    if not text[i].isalpha():
-        num += text[i]
-    else:
-        st = st + text[i] * int(num)
-        num = ''
-print(st)
+# num = ''
+# st = ''
+# for i in range(len(text)):
+#     if not text[i].isalpha():
+#         num += text[i]
+#     else:
+#         st = st + text[i] * int(num)
+#         num = ''
+# print(st)
